@@ -12,12 +12,12 @@ type Fetcher interface {
 	Fetch(url string) (body string, urls []string, err error)
 }
 
-// Crawl používá fetcher aby rekurzivn proparsoval
+// Crawl používá fetcher aby rekurzivně proparsoval
 // stránky začínající s url až do maximální hloubky.
 func Crawl(url string, depth int, fetcher Fetcher) {
-	// TODO: Fetch URLs in parallel.
-	// TODO: Don't fetch the same URL twice.
-	// This implementation doesn't do either:
+	// TODO: Stahuj URL paralelně.
+	// TODO: Nestahuje stejnou URL víckrát.
+	// Tato implementace také nedělá:
 	if depth <= 0 {
 		return
 	}
@@ -26,7 +26,7 @@ func Crawl(url string, depth int, fetcher Fetcher) {
 		fmt.Println(err)
 		return
 	}
-	fmt.Printf("našel: %s %q\n", url, body)
+	fmt.Printf("nalezeno: %s %q\n", url, body)
 	for _, u := range urls {
 		Crawl(u, depth-1, fetcher)
 	}
@@ -37,7 +37,7 @@ func main() {
 	Crawl("https://golang.org/", 4, fetcher)
 }
 
-// fakeFetcher je Fetcher který vrací předpřipravené výsledky.
+// fakeFetcher je Fetcher, který vrací předpřipravené výsledky.
 type fakeFetcher map[string]*fakeResult
 
 type fakeResult struct {

@@ -1,5 +1,5 @@
 Balíčky, proměnné a funkce.
-Nauč se základní konceptz každého Go programu.
+Nauč se základní koncepty každého Go programu.
 
 Autoři Go
 https://golang.org
@@ -10,16 +10,16 @@ Každý Go program se skládá z balíčků.
 
 Programy začínají běh v balíčku `main`.
 
-Tenhle program používá balíčky importováním lokací `"fmt"` a `"math/rand"`.
+Tento program používá balíčky importováním lokací `"fmt"` a `"math/rand"`.
 
-Podle konvence, jméno balíčku je stejné jako poslední část importované lokace. Například, balíček `"math/rand"` se obsahuje soubory které při použití začíhají příkazem `package`rand`.
+Podle konvence, jméno balíčku je stejné jako poslední část importované lokace. Například, balíček `"math/rand"` se obsahuje soubory, které při použití začínají příkazem `package`rand`.
 
 #appengine: *Poznámka:* prostředí ve kterém tyto jsou programy spouštěné je
-#appengine: deterministické, takže pokaždé když spustíš tenhle příklad
-#appengine: `rand.Intn` vfrátí stejné číslo.
+#appengine: deterministické, takže pokaždé když spustíš tento příklad
+#appengine: `rand.Intn` vrátí stejné číslo.
 #appengine:
-#appengine: (Abys viděl jiné číslo, zinicializuj generátor čísel pomocí `Seed`; podívej se na [[https://golang.org/pkg/math/rand/#Seed][`rand.Seed`]].
-#appengine: V Playgroundu je čas konstantní, takže budeš muset použít něco jiného k inicializaci jako semínko.)
+#appengine: (Abys viděl/a jiné číslo, zinicializuj generátor čísel pomocí `Seed`; podívej se na [[https://golang.org/pkg/math/rand/#Seed][`rand.Seed`]].
+#appengine: Ve hřišti je čas konstantní, takže budeš muset použít něco jiného jako počáteční hodnotu k inicializaci.)
 
 .play basics/packages.go
 
@@ -27,7 +27,7 @@ Podle konvence, jméno balíčku je stejné jako poslední část importované l
 
 Tyto příkazy seskupují importované balíčky do ozávorkovaného, "rozděleného" příkazu.
 
-Také můžeš napsat víc import příkazů, jako např.:
+Takto můžeš napsat několik import příkazů, jako např.:
 
 	import "fmt"
 	import "math"
@@ -38,7 +38,7 @@ Ale pro lepší styl je lepší použít rozdělený import příkaz.
 
 * Exportované názvy
 
-Název je v Go exportovaný (tj dostupný z jiného balíčku), pokud začíhá velkým písemenem.
+Název je v Go exportovaný (tj dostupný z jiného balíčku), pokud začíná velkým písmenem.
 Například, `Pizza` je exportovaný název, stejně jako `Pi`, které je exportované z
 balíčku `math`.
 
@@ -47,7 +47,7 @@ balíčku `math`.
 Když importujete balíček, můžete se odkázat pouze na jeho exportovaná jména.
 Jakákoliv "neimportovaná" jména nebudou z jiného balíčku dostupná.
 
-Spusti tento kód a všimni si chybové hlášky.
+Spusť tento kód a všimni si chybové hlášky.
 
 Aby si ho spravil/a, přejmenuj `math.pi` na `math.Pi` a zkus to znovu.
 
@@ -61,7 +61,7 @@ V tomto příkladu, `add` má dva parametry typu `int`.
 
 Povšimni si, že typ je specifikovaný až _po_ názvu proměnné.
 
-(Pro více o tom proč typy vypadají tak jak vypadají se podívej na [[https://blog.golang.org/gos-declaration-syntax][článek o syntaxi Go deklarací]].)
+(Pro více o tom, proč typy vypadají tak, jak vypadají, se podívej na [[https://blog.golang.org/gos-declaration-syntax][článek o syntaxi Go deklarací]].)
 
 .play basics/functions.go
 
@@ -154,7 +154,7 @@ Když potřebuješ integer, tak bys měl použít `int` pokud nemáš speciáln�
 
 * Defaultní (nulové) hodnoty
 
-Proměnné deklarované bey explicitní počáteční hodnoty jsou nastavené na jejich
+Proměnné deklarované bez explicitní počáteční hodnoty jsou nastavené na jejich
 _nulovou_hodnotu_.
 
 Nulová hodnota je:
@@ -189,9 +189,9 @@ Zkus odstranit konverzi `float64` nebo `uint` v tomto příkladu a uvidíš co s
 
 * Odvození typu (Type inference)
 
-Když deklarujete proměnnou bez uvedení explicitního typu (buď pomocí `:=` syntaxe, nebo syntaktického výrazu `var`=`), typ této proměnné je odvozený od hodnoty na pravé straně.
+Když deklarujete proměnnou bez uvedení explicitního typu (buď pomocí syntaxe `:=`, nebo syntaktického výrazu `var`=`), typ této proměnné je odvozený od hodnoty na pravé straně.
 
-Když je na pravá strana deklarace typová tak tato nová proměnná bude tohoto typu:
+Když je na pravé straně deklarace typová, tak tato nová proměnná bude tohoto typu:
 
 	var i int
 	j := i // j je int
@@ -224,7 +224,7 @@ Netypové konstanty přebírají potřebný typ podle kontextu použití.
 
 Vyzkoušej si také vypsat `needInt(Big)`.
 
-(Typ `int` může obsahovat maximálně 64-bitový integer, a někdy méně.)
+(Typ `int` může obsahovat maximálně 64-bitový integer, a někdy menší.)
 
 .play basics/numeric-constants.go
 
