@@ -1,11 +1,12 @@
-// +build no-build OMIT
+//go:build ignore || OMIT
+// +build ignore OMIT
 
 package main
 
 import "fmt"
 
-// fibonacci je funkce která vrací
-// funkci která vrací int.
+// fibonacci je funkce, která vrací
+// funkci, která vrací int.
 func fibonacci() func() int {
 }
 

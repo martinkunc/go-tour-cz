@@ -1,3 +1,4 @@
+//go:build OMIT
 // +build OMIT
 
 package main
@@ -6,7 +7,7 @@ import "fmt"
 
 const (
 	// Vytvoř obrovské číslo posouváním 1 bitu doleva o 100 míst.
-	// Jinými slovy,, binární číslo 1, následované 100 nulami.
+	// Jinými slovy, binární číslo 1 následované 100 nulami (~1.2x10^30).
 	Big = 1 << 100
 	// Posuň ho zase zpátky o 99 míst, takže skončíme s 1<<1, nebo 2.
 	Small = Big >> 99

@@ -163,7 +163,7 @@ V tomto cvičení použijeme vlastnosti Go konkurence pro paralelizaci web crawl
 
 Změň funkci `Crawl` aby stahovala URL paralelně bez stahování stejného URL dvakrát.
 
-_Nápověda: můžeš si držet cache URL které jsou prošel/la v mapě, ale mapy samotné nejsou
+_Nápověda: můžeš si držet cache URL, které jsou prošel/la v mapě, ale mapy samotné nejsou
 bezpečné pro konkurenční použití!
 
 .play concurrency/exercise-web-crawler.go

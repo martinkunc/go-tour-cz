@@ -276,7 +276,7 @@ inicializovanou a připravenou k použití.
 
 * Mapové literály
 
-Mapové literály jsou jako strukturové literély, ale klíče jsou povinné.
+Mapové literály jsou jako strukturové literály, ale klíče jsou povinné.
 
 .play moretypes/map-literals.go
 
