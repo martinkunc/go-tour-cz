@@ -23,6 +23,11 @@ value('tableOfContents', [{
     'description': '<p>Nauč se jak definovat metody na typech, jak deklarovat interface, a jak to všechno spojit.</p>',
     'lessons': ['methods']
 }, {
+    'id': 'generics',
+    'title': 'Generika',
+    'description': '<p>Nauč se jak používat typové parametry ve funkcích a strukturách v Go.</p>',
+    'lessons': ['generics']
+}, {
     'id': 'concurrency',
     'title': 'Konkurence',
     'description': '<p>Go poskytuje vlastnosti souběžnosti jako jeden ze základů jazyka.</p><p>Tento modul prochází přes go rutiny a kanály a jejich použití v různých vzorech konkurence.</p>',

@@ -1,0 +1,42 @@
+Generika
+Go podporuje generické programování pomocí typových parametrů. Tato lekce ukazuje několik příkladů, jak generika použít ve vlastním kódu.
+
+Autoři Go
+https://golang.org
+
+* Typové parametry
+
+Funkce v Go mohou být napsané tak, aby fungovaly s více typy, pomocí typových parametrů.
+Typové parametry funkce se píšou do hranatých závorek před argumenty
+funkce.
+
+  func Index[T comparable](s []T, x T) int
+
+Tato deklarace znamená, že `s` je výřez libovolného typu `T`, který splňuje
+vestavěné omezení `comparable`. `x` je také hodnota stejného typu.
+
+`comparable` je užitečné omezení, díky kterému je možné na hodnoty daného typu
+použít operátory `==` a `!=`. V tomto příkladu ho používáme k porovnání
+hodnoty se všemi elementy výřezu, dokud nenajdeme shodu. Tato funkce `Index`
+funguje pro jakýkoliv typ, který podporuje porovnávání.
+
+.play generics/index.go
+
+* Generické typy
+
+Kromě generických funkcí podporuje Go také generické typy. Typ může být
+parametrizovaný typovým paremetrem, což se může hodit pro implementaci
+generických datových struktur.
+
+Tento příklad ukazuje jednoduchou deklaraci typu pro jednosměrně vázaný seznam,
+který obsahuje hodnoty libovolného typu.
+
+Jako cvičení přidej do této implementace seznamu nějakou funkcionalitu.
+
+.play generics/list.go
+
+* Gratulujeme!
+
+Dokončil/a jsi tuto lekci!
+
+Můžeš jít zpět na seznam [[/list][modulů]] kde najdeš co se naučit dalšího, nebo pokračovat na [[javascript:click('.next-page')][další lekci]].
