@@ -14,13 +14,6 @@ Tento program používá balíčky importováním lokací `"fmt"` a `"math/rand"
 
 Podle konvence, jméno balíčku je stejné jako poslední část importované lokace. Například, balíček `"math/rand"` se obsahuje soubory, které při použití začínají příkazem `package`rand`.
 
-#appengine: *Poznámka:* Prostředí ve kterém tyto jsou programy spouštěné je
-#appengine: deterministické, takže pokaždé když spustíš tento příklad
-#appengine: `rand.Intn` vrátí stejné číslo.
-#appengine:
-#appengine: (Abys viděl/a jiné číslo, zinicializuj generátor čísel pomocí `Seed`; podívej se na [[https://golang.org/pkg/math/rand/#Seed][`rand.Seed`]].
-#appengine: Ve hřišti je čas konstantní, takže budeš muset použít něco jiného jako počáteční hodnotu k inicializaci.)
-
 .play basics/packages.go
 
 * Importy (Imports)
