@@ -1,5 +1,5 @@
 Souběžnost (konkurence)
-Go poskytuje konstrukce souběžnosti jako základní součást jazyka. Tyto lekce je ukazují a přinášejí nějaké příklady jejího použití.
+Go poskytuje konstrukce souběžnosti jako základní součást jazyka. Tato lekce je představuje a ukazuje několik příkladů, jak je lze použít.
 
 Autoři Go
 https://golang.org
