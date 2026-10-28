@@ -396,7 +396,7 @@ uvnitř balíčku `image`.
 
 (Podívej se na [[https://golang.org/pkg/image/#Image][dokumentaci]] pro další detaily.)
 
-Typy `color.Color` a `color.Model` jsou také interface, ale budeme to ignorovat a použijeme předdefinované implementace `color.RGBA` a `color.RGBAModel`. Tyto interface a typy jsou specifikované v [[https://golang.org/pkg/image/color/][balíčku image/color]]
+Typy `color.Color` a `color.Model` jsou také interface, ale budeme to ignorovat a použijeme předdefinované implementace `color.RGBA` a `color.RGBAModel`. Tyto interface a typy jsou specifikované v [[https://golang.org/pkg/image/color/][balíčku image/color]].
 
 .play methods/images.go
 
