@@ -246,7 +246,12 @@ První je index a druhá je kopie elementu na daném indexu.
 
 Můžeš přeskočit index nebo hodnotu pomocí přiřazení do `_`.
 
-Pokud potřebuješ jenom index, vypusti úplně `,` `hodnota`.
+    for i, _ := range pow
+    for _, value := range pow
+
+Pokud potřebuješ jenom index, můžeš druhou proměnnou vynechat.
+
+    for i := range pow
 
 .play moretypes/range-continued.go
 
