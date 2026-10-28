@@ -1,3 +1,5 @@
+// +build OMIT
+
 package main
 
 // List reprezentuje jednosměrně vázaný seznam, který obsahuje

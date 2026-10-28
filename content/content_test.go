@@ -8,7 +8,6 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -25,20 +24,17 @@ func TestContent(t *testing.T) {
 		t.Skipf("skipping because 'go' executable not available: %v", err)
 	}
 
-	scratch, err := ioutil.TempDir("", "tour-content-test")
-	if err != nil {
-		t.Fatal(err)
-	}
-	defer os.RemoveAll(scratch)
-
-	err = filepath.Walk(".", func(path string, fi os.FileInfo, err error) error {
+	err := filepath.Walk(".", func(path string, fi os.FileInfo, err error) error {
+		if err != nil {
+			return err
+		}
 		if filepath.Ext(path) != ".go" {
 			return nil
 		}
 		if filepath.Base(path) == "content_test.go" {
 			return nil
 		}
-		if err := testSnippet(t, path, scratch); err != nil {
+		if err := testSnippet(path, t.TempDir()); err != nil {
 			t.Errorf("%v: %v", path, err)
 		}
 		return nil
@@ -48,8 +44,8 @@ func TestContent(t *testing.T) {
 	}
 }
 
-func testSnippet(t *testing.T, path, scratch string) error {
-	b, err := ioutil.ReadFile(path)
+func testSnippet(path, scratch string) error {
+	b, err := os.ReadFile(path)
 	if err != nil {
 		return err
 	}
