@@ -246,7 +246,7 @@ První je index a druhá je kopie elementu na daném indexu.
 
 Můžeš přeskočit index nebo hodnotu pomocí přiřazení do `_`.
 
-Pokud potřebuješ jenom index, vypusti úplně `, hodnota`.
+Pokud potřebuješ jenom index, vypusti úplně `,` `hodnota`.
 
 .play moretypes/range-continued.go
 
