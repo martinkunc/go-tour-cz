@@ -185,16 +185,16 @@ Pokud potřebuješ pomoc se standardní knihovnou, podívej se na [[https://gola
 
 Pro další informace o modelu souběžnosti jazyka Go se podívej na 
 [[https://www.youtube.com/watch?v=f6kdp27TYZs][Vzory souběžnosti v Go (en)]]
-([[https://talks.golang.org/2012/concurrency.slide][slidy]])
+([[https://go.dev/talks/2012/concurrency.slide][slidy]])
 a
 [[https://www.youtube.com/watch?v=QDDwwePbDtw][Pokročilé vzory souběžnosti v Go]]
-([[https://talks.golang.org/2013/advconc.slide][slidy]])
+([[https://go.dev/talks/2013/advconc.slide][slidy]])
 a přečti si průvodce kódem (codewalk) 
 [[https://golang.org/doc/codewalk/sharemem/][Sdílení paměti pomocí komunikace]].
 
 Pro úvod do psaní web aplikací se podívej na
 [[https://vimeo.com/53221558][Jednoduché programovací prostředí]]
-([[https://talks.golang.org/2012/simple.slide][slidy]])
+([[https://go.dev/talks/2012/simple.slide][slidy]])
 a přečti si tutoriál
 [[https://golang.org/doc/articles/wiki/][Píšeme Web aplikace (en)]].
 
