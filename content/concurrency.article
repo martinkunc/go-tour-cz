@@ -171,7 +171,7 @@ bezpečné pro konkurenční použití!
 * Kam jít odsud pro více informací o Go...
 
 #appengine: Můžeš začít
-#appengine: [[https://golang.org/dl/][instalací Go]].
+#appengine: [[https://go.dev/doc/install/][instalací Go]].
 
 #appengine: Když budeš mít Go nainstalované
 [[https://golang.org/doc/][Dokumentace Go]] je skvělé místo pro
