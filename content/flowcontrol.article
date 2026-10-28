@@ -14,7 +14,7 @@ Základní `for` cyklus má tři komponenty oddělené středníky:
 - výraz podmínky: vyhodnocený před každou iterací
 - následující příkaz: provedený na konci každé iterace
 
-Počáteční příkaz bude často krátká deklarace proměnné, a proměnné tady
+Počáteční příkaz bude často deklarace proměnné, a proměnné tady
 deklarované jsou dostupné jenom v rozsahu  `for`
 příkazu.
 
