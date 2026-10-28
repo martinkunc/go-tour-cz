@@ -66,7 +66,7 @@ Proměnné deklarované příkazem jsou dostupné jenom do konce příkazu `if`.
 Proměnné deklarované uvnitř zkráceného příkazu `if` jsou také dostupné uvnitř nějakého z jeho 
 `else` bloků.
 
-(Obojí volání funkce `pow` jsou provedeny a vrátí hodnoty předtím než v `main` začne volání
+(Obě volání funkce `pow` vrátí své výsledky dříve, než v `main` začne volání
 funkce `fmt.Println`.)
 
 .play flowcontrol/if-and-else.go
