@@ -25,7 +25,7 @@ funguje pro jakýkoliv typ, který podporuje porovnávání.
 * Generické typy
 
 Kromě generických funkcí podporuje Go také generické typy. Typ může být
-parametrizovaný typovým paremetrem, což se může hodit pro implementaci
+parametrizovaný typovým parametrem, což se může hodit pro implementaci
 generických datových struktur.
 
 Tento příklad ukazuje jednoduchou deklaraci typu pro jednosměrně vázaný seznam,
