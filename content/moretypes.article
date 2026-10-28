@@ -138,7 +138,7 @@ a pak vytvoří výřez, který se na pole odkazuje:
 
 Když vyřezáváte, můžete vynechat horní nebo spodní indexy aby se použily místo toho jejich defaultní hodnoty.
 
-Defaultní hodnota pro spodní index je nula a pro horní index délka výřezu.
+Defaultní hodnota pro spodní index je nula a pro horní index délka podkladového výřezu nebo pole.
 
 Pro pole
 
