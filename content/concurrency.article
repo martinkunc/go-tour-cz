@@ -94,7 +94,7 @@ Použij případ `default` k vyzkoušení odeslání nebo příjem bez blokován
 
 * Cvičení: Ekvivalentní Binární stromy
 
-Různých binárních stromů se stejnou sekvencí uloženou v listech může být mnoho. Například, tady jsou dva binární stromy obsahující sekvenci 1, 1, 2, 3, 5, 8, 13.
+Různých binárních stromů, ve kterých je uložená stejná sekvence hodnot, může být mnoho. Například, tady jsou dva binární stromy obsahující sekvenci 1, 1, 2, 3, 5, 8, 13.
 
 .image /content/img/tree.png
 
