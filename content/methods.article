@@ -402,7 +402,7 @@ Typy `color.Color` a `color.Model` jsou také interface, ale budeme to ignorovat
 
 * Cvičení: Obrázky
 
-Vzpomínáš si na generátor obrázků, který si napsal/a dříve? Pojďme napsat další, ale tentokrát bude vracet implementaci `image.Image` místo řezu dat.
+Vzpomínáš si na [[/moretypes/18][generátor obrázků]], který si napsal/a dříve? Pojďme napsat další, ale tentokrát bude vracet implementaci `image.Image` místo řezu dat.
 
 Definuj svůj vlastní typ `Image` a implementuj [[https://golang.org/pkg/image/#Image][potřebné metody]], a zavolej `pic.ShowImage`.
 
