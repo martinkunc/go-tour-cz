@@ -343,7 +343,7 @@ Změň svoji funkci `Sqrt` aby vracela hodnotu `ErrNegativeSqrt` pokud je jí p�
 Balíček `io` specifikuje interface `io.Reader`,
 který reprezentuje operaci čtení ze streamu dat.
 
-Standardní knihovna Go obsahuje [[https://golang.org/search?q=Read#Global][množství implementací]] tohoto interface, Včetně souborů, síťových spojení, kompresorů, šifrovačů, a jiných.
+Standardní knihovna Go obsahuje [[https://cs.opensource.google/search?q=Read%5C(%5Cw%2B%5Cs%5C%5B%5C%5Dbyte%5C)&ss=go%2Fgo][množství implementací]] tohoto interface, Včetně souborů, síťových spojení, kompresorů, šifrovačů, a jiných.
 
 Rozhraní `io.Reader` má metodu `Read`:
 
