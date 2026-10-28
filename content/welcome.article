@@ -69,14 +69,18 @@ Klikni na tlačítko [[javascript:highlightAndClick(".next-page")]["další"]] n
 #appengine: na tvém vlastním počítači.
 #appengine:
 #appengine: Pro spuštění lokálního průvodce musíš nejprve
-#appengine: [[https://golang.org/doc/install][nainstalovat Go]] a potom spustit:
+#appengine: [[https://go.dev/doc/install][nainstalovat Go]] a potom spustit:
 #appengine:
-#appengine:   go install golang.org/x/website/tour@latest
+#appengine:   go install github.com/martinkunc/go-tour-cz@latest
 #appengine:
-#appengine: Tím se program `tour` uloží do adresáře `bin` ve tvém
-#appengine: [[https://golang.org/cmd/go/#hdr-GOPATH_and_Modules][GOPATH]].
+#appengine: Tím se program `go-tour-cz` uloží do adresáře `bin` ve tvém
+#appengine: [[https://go.dev/cmd/go/#hdr-GOPATH_and_Modules][GOPATH]] (obvykle `~/go/bin`).
 #appengine: Když program průvodce spustíš, otevře webový prohlížeč
 #appengine: s tvojí lokální verzí průvodce.
+#appengine:
+#appengine: Anglický originál průvodce si můžeš nainstalovat příkazem:
+#appengine:
+#appengine:   go install golang.org/x/website/tour@latest
 #appengine:
 #appengine: Samozřejmě můžeš pokračovat v tomto průvodci na této stránce.
 

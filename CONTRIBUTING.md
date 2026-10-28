@@ -20,23 +20,27 @@ The gophers there will answer or ask you to file an issue if you've tripped over
 ## Verifying changes during development
 
 In order to verify changes to the slides or code examples while developing
-locally compile with your local toolchain:
+locally, run the tour from the repository root with your local toolchain:
 
-    $ go install golang.org/x/tour/gotour
-    $ $GOPATH/bin/gotour
+    $ go run .
+
+The content, static files and templates are embedded in the binary, so the
+installed version can also be run from anywhere:
+
+    $ go install github.com/martinkunc/go-tour-cz@latest
+    $ go-tour-cz
 
 ## Running the App Engine version locally
 
-To view the App Engine version of the slides while developing locally, install
-the [Go App Engine SDK](https://cloud.google.com/appengine/downloads?hl=en)
-and then:
+To view the App Engine version of the slides while developing locally, run:
 
-    $ cd $GOPATH/src/golang.org/x/tour
-    $ $SDK_PATH/dev_appserver.py .
+    $ GAE_ENV=standard go run .
+
+and visit http://localhost:8080 (set `PORT` to use a different port).
 
 The App Engine version runs code examples against the service at play.golang.org.
 To verify changes to the code examples you must use your local toolchain to compile
-and run `gotour` locally.
+and run the tour locally with `go run .`.
 
 ## Contributing code
 
