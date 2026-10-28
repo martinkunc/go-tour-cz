@@ -69,48 +69,41 @@ Tento průvodce je dostupný v dalších jazycích:
 Klikni na tlačítko [[javascript:highlightAndClick(".next-page")]["další"]] nebo zmáčkni `PageDown` pro pokračování.
 
 #appengine: * Go offline
-#appengine: 
+#appengine:
 #appengine: Tento průvodce je také dostupný jako samostatně spustitelný program, který můžeš použít
 #appengine: bez přístupu k internetu.
-#appengine: 
+#appengine:
 #appengine: Samostatně spustitelný průvodce je rychlejší, protože spouští zdrojový kód ukázek
 #appengine: na tvém vlastním počítači.
-#appengine: 
-#appengine: Pro spuštění lokálního průvodce si nejprve
-#appengine: [[https://golang.org/dl/][stáhni a nainstaluj Go]]
-#appengine: a potom zapneš průvodce z příkazové řádky:
-#appengine: 
-#appengine: 	go tool tour
-#appengine: 
-#appengine: Nebo pokud s tím náš nějaké potíže můžeš nainstalovat a zapnout průvodce ručně
-#appengine: spuštěním těchto příkazů:
-#appengine: 
-#appengine:   go get golang.org/x/tour/gotour
-#appengine:   gotour
-#appengine: 
+#appengine:
+#appengine: Pro spuštění lokálního průvodce si nainstaluj a spusť program průvodce:
+#appengine:
+#appengine:   go get golang.org/x/tour
+#appengine:   tour
+#appengine:
 #appengine: Průvodce otevře webový prohlížeč
 #appengine: s tvoji lokální verzí průvodce.
-#appengine: 
+#appengine:
 #appengine: Nebo samozřejmě, můžeš pokračovat v tomto průvodci na této stránce.
 
 #appengine: * Go Playground
-#appengine: 
+#appengine:
 #appengine: Tento průvodce je založený na [[https://play.golang.org/][Go Playground]],
 #appengine: webové službě, která běží na serverech [[https://golang.org/][golang.org]].
-#appengine: 
+#appengine:
 #appengine: Tato služba přijímá Go program, kompiluje, linkuje a spouští program uvnitř
 #appengine: sandboxu a potom vrátí výstup.
-#appengine: 
-#appengine: Kvůli tomu má běh programů v Go Plagroundu určité limitace: 
-#appengine: 
+#appengine:
+#appengine: Kvůli tomu má běh programů v Go Plagroundu určité limitace:
+#appengine:
 #appengine: - Čas uvnitř playgroundu začíná ve 2009-11-10 23:00:00 UTC (necháme na čtenáři jako cvičení zjištění významu tohoto data). Protože když mají programy neměnný výstup, tak to zjednodušuje jejich ukládání do cache.
-#appengine: 
-#appengine: - Také tam existují limity na běhový čas a na využití CPU a paměti, a program nemůže přistupovat k externím síťovým hostům. 
-#appengine: 
+#appengine:
+#appengine: - Také tam existují limity na běhový čas a na využití CPU a paměti, a program nemůže přistupovat k externím síťovým hostům.
+#appengine:
 #appengine: Playground používá poslední stabilní verzi Go.
-#appengine: 
+#appengine:
 #appengine: Pro další informace si přečti "[[https://blog.golang.org/playground][Uvnitř Go Playgroundu]]".
-#appengine: 
+#appengine:
 #appengine: .play welcome/sandbox.go
 
 * Gratulujeme!
