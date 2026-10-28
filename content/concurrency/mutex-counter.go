@@ -10,23 +10,23 @@ import (
 
 // SafeCounter jde bezpečně použít konkurentě
 type SafeCounter struct {
-	v   map[string]int
-	mux sync.Mutex
+	mu sync.Mutex
+	v  map[string]int
 }
 
 // Inc zvýší počítadlo pro daný klíč
 func (c *SafeCounter) Inc(key string) {
-	c.mux.Lock()
+	c.mu.Lock()
 	// Zamkne pomocí Lock, takže jenom jedna gorutina může přistoupit k mapě c.v v jednu chvíli.
 	c.v[key]++
-	c.mux.Unlock()
+	c.mu.Unlock()
 }
 
 // Value vrátí aktuální hodnotu počítadla pro daný klíč
 func (c *SafeCounter) Value(key string) int {
-	c.mux.Lock()
+	c.mu.Lock()
 	// Zamkne, takže jen jedna gorutina může v jeden čas přistoupit k mapě c.v.
-	defer c.mux.Unlock()
+	defer c.mu.Unlock()
 	return c.v[key]
 }
 
