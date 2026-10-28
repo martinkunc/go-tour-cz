@@ -19,7 +19,6 @@ import (
 	"strings"
 	"time"
 
-	"golang.org/x/tools/godoc/static"
 	"golang.org/x/tools/present"
 )
 
@@ -230,14 +229,9 @@ func initScript() error {
 	modTime := time.Now()
 	b := new(bytes.Buffer)
 
-	content, ok := static.Files["playground.js"]
-	if !ok {
-		return fmt.Errorf("playground.js not found in static files")
-	}
-	b.WriteString(content)
-
 	// Keep this list in dependency order
 	files := []string{
+		"static/lib/playground.js",
 		"static/lib/jquery.min.js",
 		"static/lib/jquery-ui.min.js",
 		"static/lib/angular.min.js",
