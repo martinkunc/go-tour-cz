@@ -8,5 +8,5 @@ import (
 )
 
 func main() {
-	fmt.Printf("A teď máš %g problémů.", math.Sqrt(7))
+	fmt.Printf("A teď máš %g problémů.\n", math.Sqrt(7))
 }
