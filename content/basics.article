@@ -102,7 +102,7 @@ Příkaz `var` může být na úrovni balíčku, nebo funkce. Obojí je ukázán
 
 * Proměnné s inicializátory
 
-Deklarace var může obsahovat inicializátory, jeden na proměnnou.
+Deklarace `var` může obsahovat inicializátory, jeden na proměnnou.
 
 Pokud je nějaký inicializátor použitý je možné vynechat typ; proměnné převezmou typ z inicializátoru.
 
