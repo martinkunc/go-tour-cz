@@ -207,8 +207,11 @@ Typ interface, který nespecifikuje žádné metody je známý jako _prázdný_i
 Prázdný interface může držet hodnoty jakéhokoliv typu.
 (Každý typ implementuje alespoň žádné metody.)
 
+`any` je alias pro `interface{}` a oba zápisy jsou zcela
+rovnocenné.
+
 Prázdné interface jsou používané v kódu, který ošetřuje hodnoty neznámých typů.
-Například `fmt.Print` přijímá libovolný počet argumentů typu `interface{}`.
+Například `fmt.Print` přijímá libovolný počet argumentů typu `any`.
 
 .play methods/empty-interface.go
 
