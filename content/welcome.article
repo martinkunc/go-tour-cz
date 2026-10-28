@@ -24,8 +24,8 @@ Skrze ně se budete moci navigovat s pomocí
 - [[javascript:highlight(".next-page")]["další"]] nebo `PageDown` pro přechod na další stránku.
 
 Tento průvodce je interaktivní. Teď klikněte na
-tlačítko [[javascript:highlightAndClick("#run")][Start]] 
-(nebo stlačte `shift-enter`) pro překompilování a spuštění programu na 
+tlačítko [[javascript:highlightAndClick("#run")][Start]]
+(nebo stiskněte `Shift` + `Enter`) pro překompilování a spuštění programu na
 #appengine: vzdáleném serveru.
 vašem počítači.
 Výsledek je zobrazený pod kódem.
@@ -34,8 +34,8 @@ Tyto ukázkové programy demonstrují různé aspekty Go. Programy v průvodci m
 
 Změň program a znovu ho spusť.
 
-Všimni si, že kliknutím na [[javascript:highlightAndClick("#format")][Naformátovat]] nebo `ctrl-enter`
-text v editoru je naformátován s pomocí
+Když klikneš na [[javascript:highlightAndClick("#format")][Naformátovat]]
+(zkratka: `Ctrl` + `Enter`), text v editoru se naformátuje pomocí
 nástroje [[https://golang.org/cmd/gofmt/][gofmt]]. Můžeš zapnout a vypnout zvýraznění syntaxe 
 kliknutím na tlačítko [[javascript:highlightAndClick(".syntax-checkbox")][Syntax]].
 
