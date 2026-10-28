@@ -179,7 +179,7 @@ bezpečné pro konkurenční použití!
 začátek.
 Ta obsahuje reference, tutoriály, videa a další.
 
-Jestli se chceš naučit jak organizovat a pracovat s Go kódem, podívej se na [[https://www.youtube.com/watch?v=XCsL89YtqCs][tento screencast]], nebo si přečti [[https://golang.org/doc/code.html][Jak psát Go kód (en)]].
+Jestli se chceš naučit jak organizovat a pracovat s Go kódem, přečti si [[https://golang.org/doc/code][Jak psát Go kód (en)]].
 
 Pokud potřebuješ pomoc se standardní knihovnou, podívej se na [[https://golang.org/pkg/][referenci balíčku]]. Pro lepší seznámení s jazykem se můžeš podívat na [[https://golang.org/ref/spec][Specifikace jazyka (en)]] a možná budeš překvapený/á že je docela čitelná.
 
