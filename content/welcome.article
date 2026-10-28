@@ -68,23 +68,23 @@ Tento průvodce je dostupný v dalších jazycích:
 
 Klikni na tlačítko [[javascript:highlightAndClick(".next-page")]["další"]] nebo zmáčkni `PageDown` pro pokračování.
 
-#appengine: * Go offline
+#appengine: * Go offline (volitelné)
 #appengine:
 #appengine: Tento průvodce je také dostupný jako samostatně spustitelný program, který můžeš použít
-#appengine: bez přístupu k internetu.
-#appengine:
-#appengine: Samostatně spustitelný průvodce je rychlejší, protože spouští zdrojový kód ukázek
+#appengine: bez přístupu k internetu. Zdrojový kód ukázek sestavuje a spouští
 #appengine: na tvém vlastním počítači.
 #appengine:
-#appengine: Pro spuštění lokálního průvodce si nainstaluj a spusť program průvodce:
+#appengine: Pro spuštění lokálního průvodce musíš nejprve
+#appengine: [[https://golang.org/doc/install][nainstalovat Go]] a potom spustit:
 #appengine:
 #appengine:   go get golang.org/x/tour
-#appengine:   tour
 #appengine:
-#appengine: Průvodce otevře webový prohlížeč
-#appengine: s tvoji lokální verzí průvodce.
+#appengine: Tím se program `tour` uloží do adresáře `bin` ve tvém
+#appengine: [[https://golang.org/doc/code.html#Workspaces][pracovním prostoru]].
+#appengine: Když program průvodce spustíš, otevře webový prohlížeč
+#appengine: s tvojí lokální verzí průvodce.
 #appengine:
-#appengine: Nebo samozřejmě, můžeš pokračovat v tomto průvodci na této stránce.
+#appengine: Samozřejmě můžeš pokračovat v tomto průvodci na této stránce.
 
 #appengine: * Go Playground
 #appengine:
