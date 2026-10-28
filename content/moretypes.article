@@ -308,7 +308,7 @@ Pokud je `key` v `m`, `ok` je `true`. Pokud není, `ok` je `false`.
 
 Pokud není `key` v mapě, potom `elem` je nulová hodnota elementového typu mapy.
 
-_Poznámka_: Pokud `elem` nebo `ok` ještě nebyly deklarované, můžeš použít formu krátké deklarace:
+*Poznámka:* Pokud `elem` nebo `ok` ještě nebyly deklarované, můžeš použít formu krátké deklarace:
 
 	elem, ok := m[key]
 

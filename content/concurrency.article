@@ -65,7 +65,7 @@ Cyklus `for`i`:=`range`c` přijímá opakovaně hodnoty z kanálu, dokud není u
 
 *Poznámka:* Kanál by měl uzavírat jenom odesílatel, nikdy ne příjemce. Odeslání do uzavřeného kanálu způsobí paniku.
 
-*Další*poznámka*: Kanály nejsou jako soubory; obvykle je nemusíš zavírat. Zavření je potřeba jenom pokud chceš oznámit příjemci, že už nepřijdou žádné další hodnoty, například kvůli ukončení cyklu `range`.
+*Další*poznámka:* Kanály nejsou jako soubory; obvykle je nemusíš zavírat. Zavření je potřeba jenom pokud chceš oznámit příjemci, že už nepřijdou žádné další hodnoty, například kvůli ukončení cyklu `range`.
 
 .play concurrency/range-and-close.go
 

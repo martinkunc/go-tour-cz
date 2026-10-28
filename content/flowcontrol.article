@@ -20,7 +20,7 @@ příkazu.
 
 Cyklus skončí vyhodnocování, jakmile se jeho booleanská podmínka vyhodnotí jako `false`.
 
-_Poznámka_: Na rozdíl od jazyků jako C, Java, nebo JavaScript, tady nejsou žádné závorky,
+*Poznámka:* Na rozdíl od jazyků jako C, Java, nebo JavaScript, tady nejsou žádné závorky,
 obklopující tři komponenty příkazu `for` a složené závorky `{`}` jsou
 vždy povinné.
 
@@ -102,7 +102,7 @@ Zjisti jestli je to po více, nebo méně než 10 iteracích.
 Vyzkoušej další počáteční odhady pro z, jako třeba x, nebo x/2.
 Jak blízké jsem výsledky tvé funkce k funkci [[https://golang.org/pkg/math/#Sqrt][math.Sqrt]] ze standardní knihovny?
 
-(Poznámka: Pokud tě zajímají detaily algoritmu, výraz z² − x nahoře
+(*Poznámka:* Pokud tě zajímají detaily algoritmu, výraz z² − x nahoře
 je jak je daleko z² od toho co by mělo být (x), a dělení 2z je derivací
 z², pro zjištění jak moc upravit (z) pomocí toho jak rychle se z² mění.
 Tento obecný přístup se jmenuje [[https://en.wikipedia.org/wiki/Newton%27s_method][Newtonova metoda]].

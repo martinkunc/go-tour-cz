@@ -390,7 +390,7 @@ Udělej z něho `io.Reader` naimplementováním jeho metody `Read`.
 		At(x, y int) color.Color
 	}
 
-*Poznámka*: Metoda `Rectangle`, kterou vrací jako hodnotu metoda `Bounds` je vlastně funkce
+*Poznámka:* Metoda `Rectangle`, kterou vrací jako hodnotu metoda `Bounds` je vlastně funkce
 [[https://golang.org/pkg/image/#Rectangle][`image.Rectangle`]], protože je
 uvnitř balíčku `image`.
 

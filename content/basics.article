@@ -14,7 +14,7 @@ Tento program používá balíčky importováním lokací `"fmt"` a `"math/rand"
 
 Podle konvence, jméno balíčku je stejné jako poslední část importované lokace. Například, balíček `"math/rand"` se obsahuje soubory, které při použití začínají příkazem `package`rand`.
 
-#appengine: *Poznámka:* prostředí ve kterém tyto jsou programy spouštěné je
+#appengine: *Poznámka:* Prostředí ve kterém tyto jsou programy spouštěné je
 #appengine: deterministické, takže pokaždé když spustíš tento příklad
 #appengine: `rand.Intn` vrátí stejné číslo.
 #appengine:
