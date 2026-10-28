@@ -6,17 +6,15 @@ package main
 
 import (
 	"flag"
-	"fmt"
-	"go/build"
 	"html/template"
 	"io"
+	"io/fs"
 	"log"
 	"net"
 	"net/http"
 	"net/url"
 	"os"
 	"os/exec"
-	"path/filepath"
 	"runtime"
 	"strings"
 	"time"
@@ -30,7 +28,6 @@ import (
 )
 
 const (
-	basePkg    = "github.com/martinkunc/go-tour-cz"
 	socketPath = "/socket"
 )
 
@@ -40,37 +37,8 @@ var (
 )
 
 var (
-	// GOPATH containing the tour packages
-	gopath = os.Getenv("GOPATH")
-
 	httpAddr string
 )
-
-// isRoot reports whether path is the root directory of the tour tree.
-// To be the root, it must have content and template subdirectories.
-func isRoot(path string) bool {
-	_, err := os.Stat(filepath.Join(path, "content", "welcome.article"))
-	if err == nil {
-		_, err = os.Stat(filepath.Join(path, "template", "index.tmpl"))
-	}
-	return err == nil
-}
-
-func findRoot() (string, error) {
-	ctx := build.Default
-	p, err := ctx.Import(basePkg, "", build.FindOnly)
-	if err == nil && isRoot(p.Dir) {
-		return p.Dir, nil
-	}
-	tourRoot := filepath.Join(runtime.GOROOT(), "misc", "tour")
-	ctx.GOPATH = tourRoot
-	p, err = ctx.Import(basePkg, "", build.FindOnly)
-	if err == nil && isRoot(tourRoot) {
-		gopath = tourRoot
-		return tourRoot, nil
-	}
-	return "", fmt.Errorf("could not find go-tour content; check $GOROOT and $GOPATH")
-}
 
 func main() {
 	flag.Parse()
@@ -80,14 +48,6 @@ func main() {
 		gaeMain()
 		return
 	}
-
-	// find and serve the go tour files
-	root, err := findRoot()
-	if err != nil {
-		log.Fatalf("Couldn't find tour files: %v", err)
-	}
-
-	log.Println("Serving content from", root)
 
 	host, port, err := net.SplitHostPort(*httpListen)
 	if err != nil {
@@ -101,7 +61,7 @@ func main() {
 	}
 	httpAddr = host + ":" + port
 
-	if err := initTour(root, "SocketTransport"); err != nil {
+	if err := initTour("SocketTransport"); err != nil {
 		log.Fatal(err)
 	}
 
@@ -111,7 +71,7 @@ func main() {
 	origin := &url.URL{Scheme: "http", Host: host + ":" + port}
 	http.Handle(socketPath, socket.NewHandler(origin))
 
-	registerStatic(root)
+	registerStatic()
 
 	go func() {
 		url := "http://" + httpAddr
@@ -125,13 +85,20 @@ func main() {
 }
 
 // registerStatic registers handlers to serve static content
-// from the directory root.
-func registerStatic(root string) {
+// from the embedded root.
+func registerStatic() {
 	// Keep these static file handlers in sync with app.yaml.
-	http.Handle("/favicon.ico", http.FileServer(http.Dir(filepath.Join(root, "static", "img"))))
-	static := http.FileServer(http.Dir(root))
+	http.Handle("/favicon.ico", http.FileServer(http.FS(must(fs.Sub(root, "static/img")))))
+	static := http.FileServer(http.FS(root))
 	http.Handle("/content/img/", static)
 	http.Handle("/static/", static)
+}
+
+func must(fsys fs.FS, err error) fs.FS {
+	if err != nil {
+		panic(err)
+	}
+	return fsys
 }
 
 // rootHandler returns a handler for all the requests except the ones for lessons.
@@ -165,27 +132,6 @@ If you don't understand this message, hit Control-C to terminate this process.
 
 WARNING!  WARNING!  WARNING!
 `
-
-type response struct {
-	Output string `json:"output"`
-	Errors string `json:"compile_errors"`
-}
-
-func init() {
-	socket.Environ = environ
-}
-
-// environ returns the original execution environment with GOPATH
-// replaced (or added) with the value of the global var gopath.
-func environ() (env []string) {
-	for _, v := range os.Environ() {
-		if !strings.HasPrefix(v, "GOPATH=") {
-			env = append(env, v)
-		}
-	}
-	env = append(env, "GOPATH="+gopath)
-	return
-}
 
 // waitServer waits some time for the http Server to start
 // serving url. The return value reports whether it starts.
